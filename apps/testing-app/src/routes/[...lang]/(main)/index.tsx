@@ -1,9 +1,11 @@
 import { Homepage } from '@qwik-2-test-workspace/homepage';
-import { component$ } from '@qwik.dev/core';
+import { component$, useSignal } from '@qwik.dev/core';
 import { type DocumentHead } from '@qwik.dev/router';
 
 export default component$(() => {
-	return <Homepage />;
+	const isSearchMode = useSignal(false);
+
+	return <Homepage isActive={isSearchMode} />;
 });
 
 export const head: DocumentHead = {
