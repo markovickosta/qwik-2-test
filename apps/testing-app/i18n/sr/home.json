@@ -1,5 +1,8 @@
 {
 	"home": {
-		"test": "Test in SR lang"
+		"test": "Test in SR lang",
+		"imageAlt": {
+			"founded-product:": "Founded sr:"
+		}
 	}
 }
