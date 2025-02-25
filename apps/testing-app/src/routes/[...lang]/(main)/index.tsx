@@ -1,9 +1,16 @@
 import { Homepage } from '@qwik-2-test-workspace/homepage';
 import { component$ } from '@qwik.dev/core';
-import { type DocumentHead } from '@qwik.dev/router';
+import { routeLoader$, type DocumentHead } from '@qwik.dev/router';
+
+export const useTestLoader = routeLoader$(async () => {
+	return [{ test: 'test' }];
+});
 
 export default component$(() => {
-	return <Homepage />;
+	const testSignal = useTestLoader();
+	console.log('Initial signal value:', testSignal.value);
+
+	return <Homepage testSignal={testSignal} />;
 });
 
 export const head: DocumentHead = {
