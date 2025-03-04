@@ -1,8 +1,11 @@
-import { $, component$ } from '@qwik.dev/core';
+import { PropsOf, component$ } from '@qwik.dev/core';
 
 import { Link } from '@qwik.dev/router';
 
-export const Homepage = component$(() => {
+export const Homepage = component$((props: { 
+	imageAttributes?: PropsOf<'image'>;
+    pictureAttributes?: PropsOf<'picture'>;
+}) => {
 	return (
 		<div class="flex flex-col">
 			<h1 class="text-2xl">Homepage 👋</h1>
