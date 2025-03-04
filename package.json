@@ -6,7 +6,8 @@
 	"scripts": {
 		"start": "nx run testing-app:start",
 		"pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\"",
-		"qwik-speak": "nx run testing-app:qwik-speak-extract"
+		"qwik-speak": "nx run testing-app:qwik-speak-extract",
+		"type-build-all": "tsc -b"
 	},
 	"devDependencies": {
 		"@nx/eslint": "19.8.14",
