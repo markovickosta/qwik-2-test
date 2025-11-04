@@ -13,10 +13,11 @@
 		"@nx/react": "19.8.14",
 		"@nx/vite": "19.8.14",
 		"@nx/web": "19.8.14",
-		"@qwik.dev/core": "2.0.0-beta.1",
+		"@qwik.dev/core": "2.0.0-beta.11",
 		"@qwik.dev/partytown": "0.11.0",
-		"@qwik.dev/router": "2.0.0-beta.1",
+		"@qwik.dev/router": "2.0.0-beta.11",
 		"@types/eslint": "8.56.10",
+		"@types/express": "^5.0.5",
 		"@types/node": "20.12.12",
 		"@typescript-eslint/eslint-plugin": "7.10.0",
 		"@typescript-eslint/parser": "7.10.0",
@@ -24,7 +25,7 @@
 		"autoprefixer": "10.4.20",
 		"cssnano": "7.0.6",
 		"eslint": "8.57.0",
-		"eslint-plugin-qwik": "2.0.0-beta.1",
+		"eslint-plugin-qwik": "2.0.0-beta.11",
 		"nx": "19.8.14",
 		"postcss": "8.5.1",
 		"prettier": "3.2.5",
@@ -44,5 +45,8 @@
 	"trustedDependencies": [
 		"sharp"
 	],
-	"trustedDependencies-annotation": "Needed for bun to allow running install scripts"
+	"trustedDependencies-annotation": "Needed for bun to allow running install scripts",
+	"dependencies": {
+		"express": "^5.1.0"
+	}
 }

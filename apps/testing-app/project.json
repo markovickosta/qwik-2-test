@@ -12,11 +12,34 @@
 				"port": 5173
 			}
 		},
+		"build": {
+			"executor": "qwik-nx:build",
+			"options": {
+				"runSequence": [
+					"testing-app:build.client",
+					"testing-app:build.ssr"
+				],
+				"outputPath": "dist/apps/testing-app",
+				"postcssConfig": "apps/testing-app/postcss.config.js",
+				"skipTypeCheck": true
+			},
+			"configurations": {
+				"preview": {}
+			}
+		},
 		"build.client": {
 			"executor": "@nx/vite:build",
 			"options": {
 				"outputPath": "dist/apps/testing-app",
 				"configFile": "apps/testing-app/vite.config.ts",
+				"skipTypeCheck": true
+			}
+		},
+		"build.ssr": {
+			"executor": "@nx/vite:build",
+			"options": {
+				"outputPath": "dist/apps/testing-app/server",
+				"configFile": "apps/testing-app/adapters/express/vite.config.ts",
 				"skipTypeCheck": true
 			}
 		},

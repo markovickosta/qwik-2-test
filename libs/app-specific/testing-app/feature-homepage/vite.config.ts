@@ -36,7 +36,11 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: ['@qwik-router-config', '@qwik-city-sw-register'],
+      external: [
+        '@qwik-router-config',
+        '@qwik-router-sw-register',
+        '@qwik-client-manifest',
+      ],
     },
   },
 });
