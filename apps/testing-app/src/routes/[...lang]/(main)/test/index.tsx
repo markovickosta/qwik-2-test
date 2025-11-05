@@ -7,7 +7,7 @@ export default component$(() => {
 	return (
 		<div class="flex flex-col">
 			<h1 class="text-2xl">Test route 👋</h1>
-			<div>{t('home.test')}</div>
+			<div>{t('testPage.test')}</div>
 			<Link class="underline text-blue-600" href="/">
 				Go to homepage
 			</Link>
