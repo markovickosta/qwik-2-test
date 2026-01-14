@@ -1,6 +1,13 @@
-import { Link } from '@qwik.dev/router';
+import { Link, routeLoader$ } from '@qwik.dev/router';
+
 import { component$ } from '@qwik.dev/core';
 import { inlineTranslate } from 'qwik-speak';
+
+let k = 1;
+export const useRouteLoader = routeLoader$(() => {
+	console.log('route loader', k);
+	return k++;
+});
 
 export default component$(() => {
 	const t = inlineTranslate();
